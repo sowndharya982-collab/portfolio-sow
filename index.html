@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sowndharya Palanisamy — Performance & Growth Marketing Specialist. Meta Ads, Google Ads, conversion tracking, B2B SaaS growth, and e-commerce acquisition.">
   <title>Sowndharya Palanisamy | Performance &amp; Growth Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +27,7 @@
           <span class="sparkle-icon">&#10022;</span>
           <span>Sowndharya Palanisamy</span>
         </a>
-        <span class="nav-concept-tag">[GROWTH IN MOTION // 2026]</span>
+        <span class="nav-concept-tag">Growth in Motion &bull; 2026</span>
       </div>
 
       <!-- Accessible Hamburger Toggle Button (Mobile) -->
@@ -63,6 +66,35 @@
 
   <main>
     <!-- ======================================================================
+         AMBIENT KINETIC STAGE: TRAVELING LIGHT TRAIL & SCULPTURAL DEPTH BLOBS
+         ====================================================================== -->
+    <div class="ambient-kinetic-stage" aria-hidden="true">
+      <svg class="ambient-light-trail-svg" viewBox="0 0 1440 4800" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="coralTrailGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FF634F" stop-opacity="0.65" />
+            <stop offset="30%" stop-color="#F05245" stop-opacity="0.85" />
+            <stop offset="65%" stop-color="#FF634F" stop-opacity="0.55" />
+            <stop offset="100%" stop-color="#F05245" stop-opacity="0.75" />
+          </linearGradient>
+          <radialGradient id="radarSweepGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FF634F" stop-opacity="0.4" />
+            <stop offset="50%" stop-color="#F05245" stop-opacity="0.15" />
+            <stop offset="100%" stop-color="#F05245" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <path id="masterSpinePath" class="ambient-trail-path" d="M 720,0 C 950,280 1150,550 1100,900 C 1050,1300 280,1500 240,1900 C 200,2300 1100,2600 1050,3100 C 1000,3500 350,3800 400,4200 C 450,4500 720,4700 720,4800" />
+        <circle id="trailNode" class="trail-traveling-node" r="5" cx="720" cy="0" />
+      </svg>
+
+      <!-- Asymmetric Sculptural Blobs -->
+      <div class="sculptural-blob blob-hero-left"></div>
+      <div class="sculptural-blob blob-chronology-right"></div>
+      <div class="sculptural-blob blob-cases-left"></div>
+      <div class="sculptural-blob blob-closing-center"></div>
+    </div>
+
+    <!-- ======================================================================
          HERO SECTION: SIGNATURE OPENING EXPERIENCE
          ====================================================================== -->
     <section class="hero-editorial-section" id="hero">
@@ -73,7 +105,7 @@
           <div class="hero-content-col">
             <div class="hero-metadata-tag">
               <span class="pulse-dot"></span>
-              <span>Archive // Vol. 01 &bull; Performance &amp; GTM</span>
+              <span>Selected Work &bull; Performance &amp; Growth</span>
             </div>
 
             <h1 class="hero-editorial-title">
@@ -98,15 +130,15 @@
             <!-- Architectural Spec Grid -->
             <div class="hero-spec-grid">
               <div class="spec-item">
-                <span class="spec-label">[ 01 // BASE ]</span>
+                <span class="spec-label">01 &mdash; Location</span>
                 <span class="spec-value">Chennai, India</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">[ 02 // DISCIPLINE ]</span>
+                <span class="spec-label">02 &mdash; Focus</span>
                 <span class="spec-value">Paid Media &amp; GTM</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">[ 03 // STATUS ]</span>
+                <span class="spec-label">03 &mdash; Status</span>
                 <span class="spec-value" style="color: var(--accent-coral);">Active &bull; Open</span>
               </div>
             </div>
@@ -124,30 +156,49 @@
             </div>
           </div>
 
-          <!-- Right Column: Masked Monolith & Interactive 300-Frame Canvas -->
+          <!-- Right Column: Masked Monolith & Interactive 300-Frame Canvas with 3D Gyro Rings -->
           <div class="hero-portrait-col">
-            <div class="portrait-monolith">
-              <span class="corner-crosshair crosshair-tl">+</span>
-              <span class="corner-crosshair crosshair-tr">+</span>
-              <span class="corner-crosshair crosshair-bl">+</span>
+            <div class="portrait-orbital-wrap" id="portraitOrbital">
+              <!-- Subtle Coral Light Sweep Behind Portrait -->
+              <div class="portrait-light-sweep" aria-hidden="true"></div>
 
-              <canvas id="canvas" class="portrait-canvas"></canvas>
-            </div>
+              <!-- 3D Gyro Wireframe Rings & Orbital Markers -->
+              <svg class="portrait-gyro-svg" viewBox="0 0 560 680" aria-hidden="true">
+                <ellipse class="gyro-ellipse ellipse-1" cx="280" cy="340" rx="250" ry="120" />
+                <ellipse class="gyro-ellipse ellipse-2" cx="280" cy="340" rx="230" ry="170" />
+                <ellipse class="gyro-ellipse ellipse-dashed" cx="280" cy="340" rx="260" ry="140" />
+                <circle class="orbital-planet planet-1" r="5" />
+                <circle class="orbital-planet planet-2" r="4" />
+                <line x1="280" y1="40" x2="280" y2="70" class="gyro-marker" />
+                <line x1="280" y1="610" x2="280" y2="640" class="gyro-marker" />
+                <line x1="30" y1="340" x2="60" y2="340" class="gyro-marker" />
+                <line x1="500" y1="340" x2="530" y2="340" class="gyro-marker" />
+              </svg>
 
-            <!-- Floating Contact Card -->
-            <div class="hero-floating-contact">
-              <div class="contact-tag-header">Direct Contact</div>
-              <div class="contact-row">
-                <span>&#9678;</span>
-                <span>Chennai, India</span>
+              <!-- Portrait Monolith with 300-Frame Interactive Canvas -->
+              <div class="portrait-monolith">
+                <span class="corner-crosshair crosshair-tl">+</span>
+                <span class="corner-crosshair crosshair-tr">+</span>
+                <span class="corner-crosshair crosshair-bl">+</span>
+
+                <canvas id="canvas" class="portrait-canvas"></canvas>
               </div>
-              <div class="contact-row">
-                <span>&#9993;</span>
-                <a href="mailto:sowndharya982@gmail.com">sowndharya982@gmail.com</a>
-              </div>
-              <div class="contact-row">
-                <span>&#9742;</span>
-                <a href="tel:+919345666196">+91 9345666196</a>
+
+              <!-- Floating Contact Card -->
+              <div class="hero-floating-contact">
+                <div class="contact-tag-header">Direct Contact</div>
+                <div class="contact-row">
+                  <span>&#9678;</span>
+                  <span>Chennai, India</span>
+                </div>
+                <div class="contact-row">
+                  <span>&#9993;</span>
+                  <a href="mailto:sowndharya982@gmail.com">sowndharya982@gmail.com</a>
+                </div>
+                <div class="contact-row">
+                  <span>&#9742;</span>
+                  <a href="tel:+919345666196">+91 9345666196</a>
+                </div>
               </div>
             </div>
           </div>
@@ -161,6 +212,9 @@
             <span class="scroll-cue-arrow" aria-hidden="true">&darr;</span>
           </a>
         </div>
+
+        <!-- Connector Beacon to Chronology -->
+        <div class="hero-transition-connector" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -174,8 +228,8 @@
         <!-- Editorial Section Header -->
         <div class="editorial-section-header reveal-on-scroll">
           <div class="header-left">
-            <span class="editorial-section-index">01 // Chronology &amp; Trajectory</span>
-            <h2 class="editorial-section-title">Professional Experience</h2>
+            <span class="editorial-section-index">01 &mdash; Chronology &amp; Experience</span>
+            <h2 class="editorial-section-title">Professional <em class="serif-italic-coral">Experience</em></h2>
             <p class="editorial-section-standfirst">
               A deliberate track record of customer acquisition, paid media operations, conversion tracking, and pipeline generation across B2B SaaS and direct-to-consumer commerce.
             </p>
@@ -323,8 +377,8 @@
         <!-- Editorial Section Header -->
         <div class="editorial-section-header reveal-on-scroll">
           <div class="header-left">
-            <span class="editorial-section-index">02 // Selected Case Studies</span>
-            <h2 class="editorial-section-title">Performance In Practice</h2>
+            <span class="editorial-section-index">02 &mdash; Selected Case Studies</span>
+            <h2 class="editorial-section-title">Performance in <em class="serif-italic-coral">Practice</em></h2>
             <p class="editorial-section-standfirst">
               In-depth strategic examinations of customer acquisition funnels, creative testing systems, and multi-channel attribution across B2B SaaS and direct-to-consumer brands.
             </p>
@@ -341,7 +395,7 @@
                 <span class="case-study-big-num">01</span>
                 <span class="case-study-category">B2B SaaS Growth &bull; Go-to-Market Engine</span>
               </div>
-              <h3 class="case-study-title">CRUD Review Go-to-Market &amp; Acquisition</h3>
+              <h3 class="case-study-title">CRUD Review <span class="editorial-break">Go-to-Market &amp; <em class="serif-italic-coral">Acquisition</em></span></h3>
               <p class="case-study-narrative">
                 CRUD Review (DataDrone) is a software platform supporting commercial businesses in collecting customer feedback and generating authentic review text. To establish reliable inbound interest, I architected a multi-stage acquisition funnel combining paid social precision targeting with outbound enterprise and franchise cadences.
               </p>
@@ -381,7 +435,7 @@
               <div class="funnel-architecture-diagram">
                 <!-- Stage 1 -->
                 <div class="funnel-stage-row">
-                  <span class="funnel-stage-tag">[ STAGE 01 ]</span>
+                  <span class="funnel-stage-tag">Stage 01</span>
                   <span class="funnel-stage-name">Audience Segmentation &amp; ICP Targeting</span>
                   <span class="funnel-stage-spec">Franchises &bull; B2B</span>
                 </div>
@@ -392,7 +446,7 @@
 
                 <!-- Stage 2 -->
                 <div class="funnel-stage-row">
-                  <span class="funnel-stage-tag">[ STAGE 02 ]</span>
+                  <span class="funnel-stage-tag">Stage 02</span>
                   <span class="funnel-stage-name">Meta Ads Creative &amp; Value Proposition</span>
                   <span class="funnel-stage-spec">Lead Magnet &bull; Feed</span>
                 </div>
@@ -403,7 +457,7 @@
 
                 <!-- Stage 3 -->
                 <div class="funnel-stage-row">
-                  <span class="funnel-stage-tag">[ STAGE 03 ]</span>
+                  <span class="funnel-stage-tag">Stage 03</span>
                   <span class="funnel-stage-name">Meta Pixel Standard Events &amp; UTM Tracking</span>
                   <span class="funnel-stage-spec">Zero Attribution Loss</span>
                 </div>
@@ -414,7 +468,7 @@
 
                 <!-- Stage 4 -->
                 <div class="funnel-stage-row" style="border-color: rgba(240, 82, 69, 0.45); background: rgba(240, 82, 69, 0.08);">
-                  <span class="funnel-stage-tag" style="color: var(--accent-glow);">[ STAGE 04 ]</span>
+                  <span class="funnel-stage-tag" style="color: var(--accent-glow);">Stage 04</span>
                   <span class="funnel-stage-name">Zoho CRM Pipeline &bull; Product Demo Call</span>
                   <span class="funnel-stage-spec" style="color: var(--accent-glow);">Onboarding</span>
                 </div>
@@ -429,7 +483,7 @@
                 <span class="case-study-big-num">02</span>
                 <span class="case-study-category">DTC E-Commerce &bull; Performance Scaling</span>
               </div>
-              <h3 class="case-study-title">Sareeflix DTC Growth &amp; Paid Acquisition</h3>
+              <h3 class="case-study-title">Sareeflix <span class="editorial-break">DTC Growth &amp; <em class="serif-italic-coral">Scaling</em></span></h3>
               <p class="case-study-narrative">
                 Sareeflix is a specialized direct-to-consumer ethnic wear brand catering to high-intent festive and wedding shoppers. To scale orders profitably, I managed Google Ads and Meta Ads with an aggressive creative testing matrix, pairing dynamic short-form video reels against high-resolution fabric draping photography.
               </p>
@@ -459,36 +513,50 @@
               </a>
             </div>
 
-            <!-- Left Visual: CSS-Crafted Creative A/B Performance Testing Matrix -->
+            <!-- Left Visual: Bespoke Creative A/B Performance Dial & Dynamic Comparison -->
             <div class="case-study-visual">
               <div class="visual-topbar">
                 <span class="visual-title-tag">Creative A/B Performance Matrix</span>
                 <span class="visual-status-pill"><span class="pulse-dot"></span> Active Protocol</span>
               </div>
 
-              <div class="ab-testing-visualizer">
-                <!-- Variant A -->
-                <div class="ab-test-card active-winner">
-                  <div class="ab-test-variant">Variant A &bull; Dynamic Motion</div>
-                  <h4 class="ab-test-heading">Short-Form Video Reels</h4>
-                  <div class="ab-test-tags">
-                    <span class="ab-tag-item">&bull; Editing: CapCut &amp; Canva</span>
-                    <span class="ab-tag-item">&bull; Format: 9:16 Vertical Story</span>
-                    <span class="ab-tag-item">&bull; Hook: Fabric drape in motion</span>
+              <div class="creative-dial-visualizer">
+                <!-- Central Rotating Radar Gauge -->
+                <div class="dial-radar-center" aria-hidden="true">
+                  <svg class="dial-svg-ring" viewBox="0 0 180 90">
+                    <path class="dial-arc dial-arc-bg" d="M 20,80 A 70,70 0 0,1 160,80" />
+                    <path class="dial-arc dial-arc-accent" d="M 20,80 A 70,70 0 0,1 160,80" />
+                  </svg>
+                  <div class="dial-center-badge">
+                    <span>+38% CTR</span>
+                    <span style="font-size: 0.58rem; color: var(--text-muted); font-weight: 400;">Motion Win</span>
                   </div>
-                  <span class="ab-test-metric-badge">&#10003; Higher CTR &bull; Lower CPC</span>
                 </div>
 
-                <!-- Variant B -->
-                <div class="ab-test-card">
-                  <div class="ab-test-variant">Variant B &bull; High-Res Static</div>
-                  <h4 class="ab-test-heading">Product &amp; Texture Drapes</h4>
-                  <div class="ab-test-tags">
-                    <span class="ab-tag-item">&bull; Design: Canva Static Banner</span>
-                    <span class="ab-tag-item">&bull; Format: 1:1 Feed Carousel</span>
-                    <span class="ab-tag-item">&bull; Hook: Detail &amp; Colorway focus</span>
+                <div class="ab-testing-visualizer">
+                  <!-- Variant A -->
+                  <div class="ab-test-card active-winner">
+                    <div class="ab-test-variant">Variant A &bull; Dynamic Motion</div>
+                    <h4 class="ab-test-heading">Short-Form Video Reels</h4>
+                    <div class="ab-test-tags">
+                      <span class="ab-tag-item">&bull; Editing: CapCut &amp; Canva</span>
+                      <span class="ab-tag-item">&bull; Format: 9:16 Vertical Story</span>
+                      <span class="ab-tag-item">&bull; Hook: Fabric drape in motion</span>
+                    </div>
+                    <span class="ab-test-metric-badge">&#10003; Higher CTR &bull; Lower CPC</span>
                   </div>
-                  <span class="ab-test-metric-badge" style="color: var(--text-muted); border-color: var(--border-subtle); background: transparent;">Baseline Retention</span>
+
+                  <!-- Variant B -->
+                  <div class="ab-test-card">
+                    <div class="ab-test-variant">Variant B &bull; High-Res Static</div>
+                    <h4 class="ab-test-heading">Product &amp; Texture Drapes</h4>
+                    <div class="ab-test-tags">
+                      <span class="ab-tag-item">&bull; Design: Canva Static Banner</span>
+                      <span class="ab-tag-item">&bull; Format: 1:1 Feed Carousel</span>
+                      <span class="ab-tag-item">&bull; Hook: Detail &amp; Colorway focus</span>
+                    </div>
+                    <span class="ab-test-metric-badge" style="color: var(--text-muted); border-color: var(--border-subtle); background: transparent;">Baseline Retention</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -501,7 +569,7 @@
                 <span class="case-study-big-num">03</span>
                 <span class="case-study-category">Multi-Industry &bull; Commercial Advisory</span>
               </div>
-              <h3 class="case-study-title">Freelance Digital &amp; Growth Advisory</h3>
+              <h3 class="case-study-title">Digital &amp; <span class="editorial-break">Commercial <em class="serif-italic-coral">Advisory</em></span></h3>
               <p class="case-study-narrative">
                 End-to-end paid advertising management and growth operations for early-stage commercial enterprises. Across varied market conditions, I structure disciplined campaign hierarchies, allocate monthly budget pacing, and provide rigorous Google Analytics dashboard audits with transparent attribution findings.
               </p>
@@ -531,28 +599,28 @@
               </a>
             </div>
 
-            <!-- Right Visual: Strategic Multi-Industry Grid -->
+            <!-- Right Visual: Typographic Tri-Pillar Architecture -->
             <div class="case-study-visual">
               <div class="visual-topbar">
                 <span class="visual-title-tag">Growth Advisory Pillars</span>
                 <span class="visual-status-pill">&#10022; Framework</span>
               </div>
 
-              <div class="strategic-audit-grid">
-                <div class="audit-tile">
-                  <div class="audit-tile-num">[ 01 ]</div>
-                  <h4 class="audit-tile-title">High-Intent Paid Search</h4>
-                  <p class="audit-tile-text">Google Ads keyword group structuring, negative keyword filtering, and search query match-type optimization.</p>
+              <div class="typographic-tri-pillars">
+                <div class="pillar-monolith">
+                  <div class="pillar-diamond-badge"><span>&#10022;</span> <span>01</span></div>
+                  <h4 class="pillar-title">High-Intent Paid Search</h4>
+                  <p class="pillar-desc">Google Ads keyword group structuring, negative keyword filtering, and search query match-type optimization.</p>
                 </div>
-                <div class="audit-tile">
-                  <div class="audit-tile-num">[ 02 ]</div>
-                  <h4 class="audit-tile-title">Budget Pacing</h4>
-                  <p class="audit-tile-text">Systematic monthly spend allocation preventing early budget exhaustion and maximizing high-converting days.</p>
+                <div class="pillar-monolith">
+                  <div class="pillar-diamond-badge"><span>&#10022;</span> <span>02</span></div>
+                  <h4 class="pillar-title">Budget Pacing</h4>
+                  <p class="pillar-desc">Systematic monthly spend allocation preventing early budget exhaustion and maximizing high-converting days.</p>
                 </div>
-                <div class="audit-tile">
-                  <div class="audit-tile-num">[ 03 ]</div>
-                  <h4 class="audit-tile-title">Attribution Audits</h4>
-                  <p class="audit-tile-text">Google Analytics audits tracking bounce rate, session duration, landing page drop-offs, and conversion goals.</p>
+                <div class="pillar-monolith">
+                  <div class="pillar-diamond-badge"><span>&#10022;</span> <span>03</span></div>
+                  <h4 class="pillar-title">Attribution Audits</h4>
+                  <p class="pillar-desc">Google Analytics audits tracking bounce rate, session duration, landing page drop-offs, and conversion goals.</p>
                 </div>
               </div>
             </div>
@@ -572,8 +640,8 @@
         <!-- Editorial Section Header -->
         <div class="editorial-section-header reveal-on-scroll">
           <div class="header-left">
-            <span class="editorial-section-index">03 // Growth Protocol</span>
-            <h2 class="editorial-section-title">The Performance Methodology</h2>
+            <span class="editorial-section-index">03 &mdash; Growth Protocol</span>
+            <h2 class="editorial-section-title">The Performance <em class="serif-italic-coral">Methodology</em></h2>
             <p class="editorial-section-standfirst">
               A structured, repeatable performance marketing workflow connecting audience research with conversion tracking and sustainable customer acquisition.
             </p>
@@ -584,7 +652,7 @@
         <div class="protocol-architectural-grid">
           <!-- Step 01 -->
           <div class="protocol-step reveal-on-scroll stagger-1">
-            <span class="protocol-step-num">[ PHASE 01 ]</span>
+            <span class="protocol-step-num">Phase 01</span>
             <h3 class="protocol-step-title">Research &amp; Audience Understanding</h3>
             <p class="protocol-step-desc">
               Analyzing ideal customer profiles (ICPs), competitor advertising angles, search intent keywords, and demographic behaviors to pinpoint high-potential target segments.
@@ -593,7 +661,7 @@
 
           <!-- Step 02 -->
           <div class="protocol-step reveal-on-scroll stagger-2">
-            <span class="protocol-step-num">[ PHASE 02 ]</span>
+            <span class="protocol-step-num">Phase 02</span>
             <h3 class="protocol-step-title">Campaign Strategy &amp; Budget Planning</h3>
             <p class="protocol-step-desc">
               Structuring campaign hierarchies, establishing conversion KPIs, allocating budget across search and social channels, and selecting automated bidding models.
@@ -602,7 +670,7 @@
 
           <!-- Step 03 -->
           <div class="protocol-step reveal-on-scroll stagger-3">
-            <span class="protocol-step-num">[ PHASE 03 ]</span>
+            <span class="protocol-step-num">Phase 03</span>
             <h3 class="protocol-step-title">Creative Development &amp; Ad Setup</h3>
             <p class="protocol-step-desc">
               Designing static banners, editing short-form video reels in Canva and CapCut, drafting benefit-driven ad copy, and executing campaign setups in Meta &amp; Google ad managers.
@@ -611,7 +679,7 @@
 
           <!-- Step 04 -->
           <div class="protocol-step reveal-on-scroll stagger-1">
-            <span class="protocol-step-num">[ PHASE 04 ]</span>
+            <span class="protocol-step-num">Phase 04</span>
             <h3 class="protocol-step-title">Tracking &amp; Measurement</h3>
             <p class="protocol-step-desc">
               Implementing Meta Pixel conversion standard events, standardizing UTM parameter conventions, and verifying analytics attribution from day one.
@@ -620,7 +688,7 @@
 
           <!-- Step 05 -->
           <div class="protocol-step reveal-on-scroll stagger-2">
-            <span class="protocol-step-num">[ PHASE 05 ]</span>
+            <span class="protocol-step-num">Phase 05</span>
             <h3 class="protocol-step-title">Optimization &amp; ROAS Scaling</h3>
             <p class="protocol-step-desc">
               Monitoring CTR, CPC, and ROAS on an ongoing basis, mitigating creative fatigue, reallocating spend toward top performers, and reporting transparent findings.
@@ -629,7 +697,7 @@
 
           <!-- Step 06 -->
           <div class="protocol-step reveal-on-scroll stagger-3">
-            <span class="protocol-step-num">[ PHASE 06 ]</span>
+            <span class="protocol-step-num">Phase 06</span>
             <h3 class="protocol-step-title">Lead Pipeline &amp; Growth Iteration</h3>
             <p class="protocol-step-desc">
               Integrating paid campaigns with CRM pipeline stages, reviewing customer inquiry flows, and applying campaign learnings to subsequent growth sprints.
@@ -650,8 +718,8 @@
         <!-- Editorial Section Header -->
         <div class="editorial-section-header reveal-on-scroll">
           <div class="header-left">
-            <span class="editorial-section-index">04 // Core Arsenal</span>
-            <h2 class="editorial-section-title">Capabilities &amp; Toolkit</h2>
+            <span class="editorial-section-index">04 &mdash; Core Arsenal</span>
+            <h2 class="editorial-section-title">Capabilities &amp; <em class="serif-italic-coral">Toolkit</em></h2>
             <p class="editorial-section-standfirst">
               A detailed directory of advertising networks, conversion frameworks, analytical toolsets, and creative software deployed across campaigns.
             </p>
@@ -659,56 +727,69 @@
           <div class="header-watermark" aria-hidden="true">ARSENAL</div>
         </div>
 
-        <div class="arsenal-index-grid">
+        <div class="arsenal-radar-stage">
+          <!-- Constellation Radar Background SVG -->
+          <svg class="radar-backdrop-svg" viewBox="0 0 720 720" aria-hidden="true">
+            <circle class="radar-circle" cx="360" cy="360" r="340" />
+            <circle class="radar-circle radar-outer" cx="360" cy="360" r="260" />
+            <circle class="radar-circle" cx="360" cy="360" r="150" />
+            <circle class="radar-circle" cx="360" cy="360" r="50" />
+            <line x1="360" y1="20" x2="360" y2="700" class="radar-crosshair" />
+            <line x1="20" y1="360" x2="700" y2="360" class="radar-crosshair" />
+            <polygon points="360,360 360,20 600,100" class="radar-sweep-beam" />
+          </svg>
 
-          <!-- Category 1 -->
-          <div class="arsenal-category reveal-on-scroll stagger-1">
-            <div class="arsenal-category-title">
-              <span>&#10022;</span>
-              <span>Paid Media &amp; Advertising</span>
+          <div class="arsenal-index-grid">
+
+            <!-- Category 1 -->
+            <div class="arsenal-category reveal-on-scroll stagger-1">
+              <div class="arsenal-category-title">
+                <span>&#10022;</span>
+                <span>Paid Media &amp; Advertising</span>
+              </div>
+              <ul class="arsenal-skill-items">
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Meta Ads Manager</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Google Ads (Search &amp; Shopping)</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>PPC Campaign Optimization</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Audience Demographic Targeting</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Bid Management &amp; Pacing</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Lookalike &amp; Custom Audiences</li>
+              </ul>
             </div>
-            <ul class="arsenal-skill-items">
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Meta Ads Manager</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Google Ads (Search &amp; Shopping)</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>PPC Campaign Optimization</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Audience Demographic Targeting</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Bid Management &amp; Pacing</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Lookalike &amp; Custom Audiences</li>
-            </ul>
-          </div>
 
-          <!-- Category 2 -->
-          <div class="arsenal-category reveal-on-scroll stagger-2">
-            <div class="arsenal-category-title">
-              <span>&#10022;</span>
-              <span>Measurement &amp; Tracking</span>
+            <!-- Category 2 -->
+            <div class="arsenal-category reveal-on-scroll stagger-2">
+              <div class="arsenal-category-title">
+                <span>&#10022;</span>
+                <span>Measurement &amp; Tracking</span>
+              </div>
+              <ul class="arsenal-skill-items">
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Meta Pixel Implementation</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Standardized UTM Taxonomy</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>CTR &amp; CPC Performance Analysis</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Blended ROAS Monitoring</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Google Analytics Dashboard Audits</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Multi-Touch Conversion Attribution</li>
+              </ul>
             </div>
-            <ul class="arsenal-skill-items">
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Meta Pixel Implementation</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Standardized UTM Taxonomy</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>CTR &amp; CPC Performance Analysis</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Blended ROAS Monitoring</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Google Analytics Dashboard Audits</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Multi-Touch Conversion Attribution</li>
-            </ul>
-          </div>
 
-          <!-- Category 3 -->
-          <div class="arsenal-category reveal-on-scroll stagger-3">
-            <div class="arsenal-category-title">
-              <span>&#10022;</span>
-              <span>Operations &amp; Creative</span>
+            <!-- Category 3 -->
+            <div class="arsenal-category reveal-on-scroll stagger-3">
+              <div class="arsenal-category-title">
+                <span>&#10022;</span>
+                <span>Operations &amp; Creative</span>
+              </div>
+              <ul class="arsenal-skill-items">
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Zoho CRM Pipeline Hygiene</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Enterprise &amp; Franchise Cold Calling</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Short-Form Video (CapCut &amp; Canva)</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Creative A/B Testing Matrix</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Ad Copywriting &amp; Value Angles</li>
+                <li class="arsenal-skill-item"><span class="constellation-node-dot"></span>Demo Scheduling &amp; Onboarding</li>
+              </ul>
             </div>
-            <ul class="arsenal-skill-items">
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Zoho CRM Pipeline Hygiene</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Enterprise &amp; Franchise Cold Calling</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Short-Form Video (CapCut &amp; Canva)</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Creative A/B Testing Matrix</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Ad Copywriting &amp; Value Angles</li>
-              <li class="arsenal-skill-item"><span class="skill-bullet">&#9670;</span>Demo Scheduling &amp; Onboarding</li>
-            </ul>
-          </div>
 
+          </div>
         </div>
 
       </div>
@@ -723,8 +804,8 @@
         <!-- Editorial Section Header -->
         <div class="editorial-section-header reveal-on-scroll">
           <div class="header-left">
-            <span class="editorial-section-index">05 // Credentials &amp; Foundation</span>
-            <h2 class="editorial-section-title">Academic &amp; Professional Qualifications</h2>
+            <span class="editorial-section-index">05 &mdash; Credentials &amp; Foundation</span>
+            <h2 class="editorial-section-title">Academic &amp; <em class="serif-italic-coral">Qualifications</em></h2>
             <p class="editorial-section-standfirst">
               Formal business economics and commercial banking education balanced with practical performance marketing certifications.
             </p>
@@ -759,7 +840,7 @@
 
           <!-- Sidebar: Location & Linguistic Capabilities -->
           <div class="credentials-sidebar-block reveal-on-scroll stagger-2">
-            <div class="credentials-sidebar-title">[ REGIONAL &amp; MULTILINGUAL SPECS ]</div>
+            <div class="credentials-sidebar-title">Regional &amp; Multilingual Focus</div>
             
             <div class="language-row">
               <span class="language-name">Location Base</span>
@@ -788,13 +869,22 @@
          SECTION 06: INITIATE COLLABORATION (CONTACT & MINIMALIST FOOTER)
          ====================================================================== -->
     <section class="section-closing-contact" id="contact">
+      <!-- Expanding Coral Aura Rings -->
+      <div class="closing-expanding-aura" aria-hidden="true">
+        <div class="aura-ring ring-1"></div>
+        <div class="aura-ring ring-2"></div>
+        <div class="aura-ring ring-3"></div>
+      </div>
+
       <div class="container">
 
         <div class="closing-contact-grid">
           
           <div class="closing-statement-wrap reveal-on-scroll">
-            <div class="closing-subhead">[ 06 // INITIATE COLLABORATION ]</div>
-            <h2 class="closing-title">Let's build scalable customer acquisition engines.</h2>
+            <span class="closing-corner-bracket bracket-tl" aria-hidden="true"></span>
+            <span class="closing-corner-bracket bracket-br" aria-hidden="true"></span>
+            <div class="closing-subhead">06 &mdash; Initiate Collaboration</div>
+            <h2 class="closing-title">Let's build <em class="serif-italic-coral">scalable</em> customer acquisition engines.</h2>
             <a href="mailto:sowndharya982@gmail.com" class="closing-big-email">
               sowndharya982@gmail.com &nearr;
             </a>
@@ -1184,6 +1274,92 @@
       preloadImages();
       onScroll();
       requestAnimationFrame(animate);
+    })();
+
+    // 7. Desktop 3D Gyro Parallax Engine (Subtle cursor-driven perspective tilt)
+    (function initGyroParallax() {
+      const orbital = document.getElementById('portraitOrbital');
+      if (!orbital || window.matchMedia('(pointer: coarse)').matches) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      let targetRotX = 0;
+      let targetRotY = 0;
+      let currentRotX = 0;
+      let currentRotY = 0;
+      let isVisible = true;
+
+      // Only calculate if hero is visible to conserve performance
+      const hero = document.getElementById('hero');
+      if (hero && 'IntersectionObserver' in window) {
+        const obs = new IntersectionObserver(([entry]) => {
+          isVisible = entry.isIntersecting;
+        }, { threshold: 0.05 });
+        obs.observe(hero);
+      }
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isVisible) return;
+        const cx = window.innerWidth * 0.5;
+        const cy = window.innerHeight * 0.5;
+        const dx = (e.clientX - cx) / cx;
+        const dy = (e.clientY - cy) / cy;
+
+        targetRotX = -dy * 6.5;
+        targetRotY = dx * 7.5;
+      }, { passive: true });
+
+      function loop() {
+        if (isVisible) {
+          currentRotX += (targetRotX - currentRotX) * 0.08;
+          currentRotY += (targetRotY - currentRotY) * 0.08;
+          orbital.style.transform = `perspective(1000px) rotateX(${currentRotX.toFixed(2)}deg) rotateY(${currentRotY.toFixed(2)}deg)`;
+        }
+        requestAnimationFrame(loop);
+      }
+      requestAnimationFrame(loop);
+    })();
+
+    // 8. Continuous Coral Light Trail Node Sync Engine (Smooth spine progress tracker)
+    (function initLightTrailSync() {
+      const path = document.getElementById('masterSpinePath');
+      const node = document.getElementById('trailNode');
+      if (!path || !node) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      let pathLength = 0;
+      try {
+        pathLength = path.getTotalLength();
+      } catch (e) {
+        return;
+      }
+
+      let ticking = false;
+      function updateTrail() {
+        const scrollY = window.scrollY;
+        const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const progress = Math.min(1, Math.max(0, scrollY / maxScroll));
+
+        const point = path.getPointAtLength(progress * pathLength);
+        node.setAttribute('cx', point.x.toFixed(1));
+        node.setAttribute('cy', point.y.toFixed(1));
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateTrail);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        try {
+          pathLength = path.getTotalLength();
+          updateTrail();
+        } catch (e) {}
+      }, { passive: true });
+
+      updateTrail();
     })();
   </script>
 </body>

@@ -5,7 +5,7 @@
             Muted Gray (#B8B1A9), Coral Red (#F05245), Red-Orange (#FF634F)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   /* Surface Foundations */
@@ -42,10 +42,10 @@
   --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.75);
   --shadow-coral: 0 0 32px rgba(240, 82, 69, 0.28);
 
-  /* Typography Stacks */
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  /* Art-Directed Typography Stacks */
+  --font-serif: 'Bodoni Moda', 'Didot', 'Bodoni MT', 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Easing & Timing */
   --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
@@ -73,6 +73,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size-adjust: from-font;
 }
 
 body {
@@ -85,7 +86,29 @@ body {
   background-position: top center, 0 0;
   overflow-x: hidden;
   position: relative;
-  line-height: 1.6;
+  line-height: 1.68;
+  font-family: var(--font-sans);
+  font-size-adjust: from-font;
+}
+
+p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.editorial-break {
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .editorial-break {
+    display: inline;
+  }
 }
 
 /* Custom subtle scrollbar */
@@ -247,9 +270,9 @@ button {
   align-items: center;
   gap: 0.55rem;
   font-family: var(--font-serif);
-  font-size: 1.18rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 1.22rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
   color: var(--text-primary);
 }
 
@@ -266,11 +289,12 @@ button {
 }
 
 .nav-concept-tag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: var(--text-muted);
-  text-transform: uppercase;
+  text-transform: none;
   border-left: 1px solid var(--border-hairline-bright);
   padding-left: 0.85rem;
 }
@@ -292,9 +316,9 @@ button {
 .nav-link {
   font-family: var(--font-sans);
   font-size: 0.88rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   position: relative;
   padding: 0.25rem 0;
   transition: color var(--transition-fast);
@@ -338,9 +362,9 @@ button {
   gap: 0.65rem;
   padding: 0.55rem 1.25rem;
   font-family: var(--font-sans);
-  font-size: 0.84rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
   color: var(--text-primary);
   background: rgba(240, 82, 69, 0.08);
   border: 1px solid var(--border-accent);
@@ -464,11 +488,11 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: var(--accent-coral);
-  text-transform: uppercase;
   margin-bottom: 1.5rem;
   padding: 0.35rem 0.85rem;
   background: rgba(240, 82, 69, 0.08);
@@ -493,12 +517,13 @@ button {
 /* Oversized Editorial Typography */
 .hero-editorial-title {
   font-family: var(--font-serif);
-  font-size: clamp(3.2rem, 7vw, 6.8rem);
+  font-size: clamp(3.4rem, 7.5vw, 6.8rem);
   font-weight: 500;
   line-height: 0.98;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
   margin-bottom: 1.15rem;
+  text-wrap: balance;
 }
 
 .hero-editorial-title .title-reveal-line {
@@ -531,6 +556,7 @@ button {
 }
 
 .serif-italic-coral {
+  font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
   color: var(--accent-coral);
@@ -550,10 +576,10 @@ button {
 
 .hero-prominent-name {
   font-family: var(--font-sans);
-  font-size: clamp(1.85rem, 4vw, 3.25rem);
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
+  font-size: clamp(1.75rem, 3.8vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
@@ -574,10 +600,12 @@ button {
 }
 
 .hero-standfirst {
+  font-family: var(--font-sans);
   font-size: 1.15rem;
-  line-height: 1.65;
+  font-weight: 300;
+  line-height: 1.68;
   color: var(--text-secondary);
-  max-width: 540px;
+  max-width: 560px;
   margin-bottom: 2.25rem;
   opacity: 0;
   animation: fadeInSlow 1s var(--ease-editorial) 0.58s forwards;
@@ -589,7 +617,7 @@ button {
 
 .hero-standfirst strong {
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Hero Architectural Spec Grid */
@@ -612,15 +640,16 @@ button {
 }
 
 .spec-label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
   text-transform: uppercase;
 }
 
 .spec-value {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-primary);
 }
@@ -639,9 +668,10 @@ button {
   align-items: center;
   gap: 0.75rem;
   padding: 0.85rem 1.75rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
   color: #FFFFFF;
   background: var(--accent-coral);
   border: 1px solid var(--accent-glow);
@@ -660,9 +690,10 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   color: var(--text-secondary);
   padding: 0.6rem 0.5rem;
   transition: color var(--transition-fast);
@@ -891,10 +922,10 @@ button {
 }
 
 .editorial-section-index {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--accent-coral);
   text-transform: uppercase;
   display: block;
@@ -905,25 +936,30 @@ button {
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 5vw, 4.2rem);
   font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
+  text-wrap: balance;
 }
 
 .editorial-section-standfirst {
+  font-family: var(--font-sans);
   font-size: 1.05rem;
-  line-height: 1.6;
+  font-weight: 300;
+  line-height: 1.65;
   color: var(--text-secondary);
   margin-top: 0.85rem;
+  max-width: 65ch;
 }
 
 .header-watermark {
   font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
   font-size: clamp(4rem, 10vw, 9rem);
-  font-weight: 700;
-  color: rgba(245, 242, 238, 0.025);
+  color: rgba(245, 242, 238, 0.03);
   line-height: 0.8;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   user-select: none;
   pointer-events: none;
 }
@@ -1076,27 +1112,27 @@ button {
 }
 
 .entry-date {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--accent-coral);
-  text-transform: uppercase;
 }
 
 .entry-company-tag {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   color: var(--text-muted);
-  text-transform: uppercase;
 }
 
 .entry-role {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   margin-bottom: 0.75rem;
   transition: color var(--transition-fast);
@@ -1108,14 +1144,16 @@ button {
 }
 
 .entry-company {
+  font-family: var(--font-sans);
   font-size: 0.98rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--accent-glow);
   margin-bottom: 0.85rem;
 }
 
 .entry-desc {
-  font-size: 0.98rem;
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
   line-height: 1.7;
   color: var(--text-secondary);
   transition: color var(--transition-fast);
@@ -1133,19 +1171,26 @@ button {
 }
 
 .entry-pill {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.65rem;
-  background: rgba(245, 242, 238, 0.04);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 0.28rem 0.65rem;
+  background: rgba(245, 242, 238, 0.025);
   border: 1px solid var(--border-hairline);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.entry-pill:hover {
+  border-color: rgba(240, 82, 69, 0.4);
+  color: var(--text-primary);
 }
 
 .timeline-entry.is-active .entry-pill {
   border-color: rgba(240, 82, 69, 0.35);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 /* Sidebar Column (Education & Credentials & Toolkit) */
@@ -1163,9 +1208,10 @@ button {
 }
 
 .sidebar-block-title {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 0.78rem;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   color: var(--accent-coral);
   text-transform: uppercase;
   margin-bottom: 1.75rem;
@@ -1186,8 +1232,9 @@ button {
 }
 
 .edu-year {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
   color: var(--text-muted);
   margin-bottom: 0.35rem;
 }
@@ -1201,6 +1248,7 @@ button {
 }
 
 .edu-school {
+  font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--accent-glow);
@@ -1208,6 +1256,7 @@ button {
 }
 
 .edu-notes {
+  font-family: var(--font-sans);
   font-size: 0.88rem;
   line-height: 1.6;
   color: var(--text-secondary);
@@ -1224,8 +1273,10 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   padding: 0.35rem 0.75rem;
   background: rgba(36, 35, 32, 0.65);
   border: 1px solid var(--border-hairline-bright);
@@ -1313,34 +1364,39 @@ button {
   font-family: var(--font-serif);
   font-size: 3.2rem;
   font-weight: 300;
+  font-style: italic;
   line-height: 1;
   color: var(--accent-coral);
   letter-spacing: -0.04em;
 }
 
 .case-study-category {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: var(--text-muted);
-  text-transform: uppercase;
 }
 
 .case-study-title {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
   color: var(--text-primary);
   margin-bottom: 1.25rem;
+  text-wrap: balance;
 }
 
 .case-study-narrative {
+  font-family: var(--font-sans);
   font-size: 1.05rem;
+  font-weight: 350;
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 1.75rem;
+  text-wrap: pretty;
 }
 
 /* Strategy Deliverables Spec List */
@@ -1361,15 +1417,17 @@ button {
 }
 
 .spec-entry-title {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
   text-transform: uppercase;
 }
 
 .spec-entry-body {
-  font-size: 0.88rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
   color: var(--text-primary);
   font-weight: 500;
 }
@@ -1378,12 +1436,11 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
   color: var(--accent-coral);
-  text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--accent-coral);
   transition: all var(--transition-fast);
@@ -1431,9 +1488,10 @@ button {
 }
 
 .visual-title-tag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
   color: var(--text-secondary);
   text-transform: uppercase;
 }
@@ -1442,8 +1500,9 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
   color: var(--accent-coral);
 }
 
@@ -1474,22 +1533,24 @@ button {
 }
 
 .funnel-stage-tag {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   color: var(--accent-coral);
 }
 
 .funnel-stage-name {
-  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-primary);
 }
 
 .funnel-stage-spec {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
   color: var(--text-muted);
   text-align: right;
 }
@@ -1529,9 +1590,10 @@ button {
 }
 
 .ab-test-variant {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--accent-coral);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -1539,8 +1601,8 @@ button {
 
 .ab-test-heading {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 0.65rem;
 }
@@ -1553,8 +1615,9 @@ button {
 }
 
 .ab-tag-item {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 400;
   color: var(--text-secondary);
 }
 
@@ -1564,8 +1627,8 @@ button {
   background: rgba(240, 82, 69, 0.12);
   border: 1px solid rgba(240, 82, 69, 0.3);
   border-radius: 4px;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
   color: var(--accent-glow);
   font-weight: 500;
 }
@@ -1593,22 +1656,25 @@ button {
 }
 
 .audit-tile-num {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
   color: var(--accent-coral);
   margin-bottom: 0.5rem;
 }
 
 .audit-tile-title {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.12rem;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .audit-tile-text {
-  font-size: 0.82rem;
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  line-height: 1.55;
   color: var(--text-secondary);
 }
 
@@ -1664,12 +1730,13 @@ button {
 }
 
 .protocol-step-num {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   color: var(--accent-coral);
   margin-bottom: 0.65rem;
+  text-transform: uppercase;
   display: block;
 }
 
@@ -1683,6 +1750,7 @@ button {
 }
 
 .protocol-step-desc {
+  font-family: var(--font-sans);
   font-size: 0.92rem;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -1718,9 +1786,10 @@ button {
 }
 
 .arsenal-category-title {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 0.82rem;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   color: var(--accent-coral);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -1737,7 +1806,9 @@ button {
 }
 
 .arsenal-skill-item {
-  font-size: 0.98rem;
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  font-weight: 400;
   color: var(--text-secondary);
   display: flex;
   align-items: baseline;
@@ -1795,9 +1866,10 @@ button {
 }
 
 .credential-type-badge {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   color: var(--accent-coral);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -1812,6 +1884,7 @@ button {
 }
 
 .credential-entity {
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   color: var(--accent-glow);
   font-weight: 500;
@@ -1819,6 +1892,7 @@ button {
 }
 
 .credential-details {
+  font-family: var(--font-sans);
   font-size: 0.92rem;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -1832,9 +1906,10 @@ button {
 }
 
 .credentials-sidebar-title {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   color: var(--accent-coral);
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -1850,12 +1925,14 @@ button {
 }
 .language-row:last-child { border-bottom: none; }
 .language-name {
+  font-family: var(--font-sans);
   color: var(--text-primary);
   font-weight: 500;
 }
 .language-level {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 400;
   color: var(--text-muted);
 }
 
@@ -1889,9 +1966,10 @@ button {
 }
 
 .closing-subhead {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 0.8rem;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   color: var(--accent-coral);
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -1899,11 +1977,12 @@ button {
 
 .closing-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
+  text-wrap: balance;
   margin-bottom: 2rem;
 }
 
@@ -1912,6 +1991,7 @@ button {
   font-family: var(--font-serif);
   font-size: clamp(1.4rem, 3.2vw, 2.6rem);
   font-style: italic;
+  font-weight: 400;
   color: var(--accent-coral);
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--accent-coral);
@@ -1940,14 +2020,16 @@ button {
 }
 
 .closing-meta-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
   text-transform: uppercase;
 }
 
 .closing-meta-value {
+  font-family: var(--font-sans);
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-primary);
@@ -2026,6 +2108,594 @@ button {
 .stagger-4 { transition-delay: 0.4s; }
 
 /* ==========================================================================
+   MOTION GRAPHICS SYSTEM: AMBIENT TRAIL, 3D GEOMETRIES & KINETIC ELEMENTS
+   ========================================================================== */
+
+/* Continuous Ambient Kinetic Stage */
+.ambient-kinetic-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ambient-light-trail-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.38;
+  mix-blend-mode: screen;
+}
+
+.ambient-trail-path {
+  fill: none;
+  stroke: url(#coralTrailGrad);
+  stroke-width: 1.5;
+  stroke-dasharray: 8 18;
+  animation: ambientTrailFlow 40s linear infinite;
+}
+
+@keyframes ambientTrailFlow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -1000; }
+}
+
+.trail-traveling-node {
+  fill: var(--accent-glow);
+  filter: drop-shadow(0 0 10px #FF634F);
+  transition: transform 0.1s linear;
+}
+
+/* Asymmetric Sculptural Blobs */
+.sculptural-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.13;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.blob-hero-left {
+  top: 100px;
+  left: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, #F05245 0%, rgba(240, 82, 69, 0) 70%);
+  animation: floatMorphA 22s ease-in-out infinite alternate;
+}
+
+.blob-chronology-right {
+  top: 1350px;
+  right: -140px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, #FF634F 0%, rgba(255, 99, 79, 0) 70%);
+  animation: floatMorphB 26s ease-in-out infinite alternate;
+}
+
+.blob-cases-left {
+  top: 2550px;
+  left: -160px;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, #F05245 0%, rgba(240, 82, 69, 0) 70%);
+  animation: floatMorphA 24s ease-in-out infinite alternate-reverse;
+}
+
+.blob-closing-center {
+  bottom: 80px;
+  left: 50%;
+  margin-left: -320px;
+  width: 640px;
+  height: 480px;
+  background: radial-gradient(circle, #FF634F 0%, rgba(240, 82, 69, 0) 75%);
+  animation: pulseAura 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatMorphA {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.08); }
+  100% { transform: translate(-30px, 40px) scale(0.94); }
+}
+
+@keyframes floatMorphB {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 35px) scale(1.1); }
+  100% { transform: translate(35px, -45px) scale(0.92); }
+}
+
+@keyframes pulseAura {
+  0% { transform: scale(0.92); opacity: 0.10; }
+  100% { transform: scale(1.15); opacity: 0.22; }
+}
+
+/* ==========================================================================
+   HERO: 3D ORBITAL GYRO & CORAL LIGHT SWEEP AROUND PORTRAIT
+   ========================================================================== */
+.portrait-orbital-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portrait-light-sweep {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(240, 82, 69, 0.32) 0%, rgba(255, 99, 79, 0.12) 45%, transparent 72%);
+  filter: blur(44px);
+  z-index: 1;
+  pointer-events: none;
+  animation: sweepBreathe 9s ease-in-out infinite alternate;
+}
+
+@keyframes sweepBreathe {
+  0% { transform: scale(0.94) rotate(0deg); opacity: 0.65; }
+  50% { transform: scale(1.08) rotate(4deg); opacity: 0.95; }
+  100% { transform: scale(0.96) rotate(-3deg); opacity: 0.7; }
+}
+
+.portrait-gyro-svg {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  top: -15%;
+  left: -15%;
+  pointer-events: none;
+  z-index: 3;
+  overflow: visible;
+  transform: rotate(-6deg);
+}
+
+.gyro-ellipse {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.gyro-ellipse.ellipse-1 {
+  stroke: rgba(240, 82, 69, 0.4);
+  stroke-width: 1.25;
+  animation: gyroSpin1 42s linear infinite;
+  transform-origin: 280px 340px;
+}
+
+.gyro-ellipse.ellipse-2 {
+  stroke: rgba(245, 242, 238, 0.22);
+  stroke-width: 1;
+  stroke-dasharray: 6 14;
+  animation: gyroSpin2 32s linear infinite reverse;
+  transform-origin: 280px 340px;
+}
+
+.gyro-ellipse.ellipse-dashed {
+  stroke: rgba(255, 99, 79, 0.3);
+  stroke-width: 1;
+  stroke-dasharray: 2 12;
+  animation: gyroSpin1 58s linear infinite;
+  transform-origin: 280px 340px;
+}
+
+.orbital-planet {
+  fill: var(--accent-glow);
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.orbital-planet.planet-1 {
+  cx: 530;
+  cy: 340;
+  animation: planetOrbit1 42s linear infinite;
+  transform-origin: 280px 340px;
+}
+
+.orbital-planet.planet-2 {
+  cx: 280;
+  cy: 170;
+  animation: planetOrbit2 32s linear infinite reverse;
+  transform-origin: 280px 340px;
+}
+
+@keyframes gyroSpin1 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gyroSpin2 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes planetOrbit1 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes planetOrbit2 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.gyro-marker {
+  stroke: rgba(240, 82, 69, 0.45);
+  stroke-width: 1;
+}
+
+/* Hero to Chronology Connector Beacon */
+.hero-transition-connector {
+  position: absolute;
+  bottom: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(180deg, var(--border-hairline) 0%, var(--accent-coral) 100%);
+  z-index: 20;
+}
+
+.hero-transition-connector::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-glow);
+  box-shadow: 0 0 12px var(--accent-glow);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   CASE STUDY 01: ANIMATED SIGNAL PULSE PIPELINE
+   ========================================================================== */
+.funnel-stage-row {
+  position: relative;
+  overflow: hidden;
+}
+
+.funnel-stage-row::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(240, 82, 69, 0.12), transparent);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.funnel-stage-row:hover::after {
+  transform: translateX(300%);
+}
+
+.connector-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.connector-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px #FF634F;
+  animation: pulseStream 2.6s ease-in-out infinite;
+}
+
+@keyframes pulseStream {
+  0% { top: -100%; opacity: 0; }
+  30% { opacity: 1; }
+  100% { top: 200%; opacity: 0; }
+}
+
+/* ==========================================================================
+   CASE STUDY 02: BESPOKE CREATIVE A/B PERFORMANCE DIAL
+   ========================================================================== */
+.creative-dial-visualizer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dial-radar-center {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dial-svg-ring {
+  width: 180px;
+  height: 90px;
+  overflow: visible;
+}
+
+.dial-arc {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.dial-arc-bg {
+  stroke: var(--border-subtle);
+  stroke-width: 2;
+}
+
+.dial-arc-accent {
+  stroke: url(#coralTrailGrad);
+  stroke-width: 3.5;
+  stroke-dasharray: 140 100;
+  animation: dialSweep 4s ease-in-out infinite alternate;
+}
+
+@keyframes dialSweep {
+  0% { stroke-dashoffset: 20; }
+  100% { stroke-dashoffset: -30; }
+}
+
+.dial-center-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-glow);
+  text-transform: uppercase;
+  background: var(--bg-secondary);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-accent);
+  box-shadow: 0 0 16px rgba(240, 82, 69, 0.3);
+}
+
+/* ==========================================================================
+   CASE STUDY 03: TYPOGRAPHIC TRI-PILLAR ARCHITECTURE
+   ========================================================================== */
+.typographic-tri-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pillar-monolith {
+  position: relative;
+  background: rgba(36, 35, 32, 0.45);
+  border: 1px solid var(--border-hairline);
+  padding: 1.75rem 1.4rem;
+  border-radius: 6px;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.pillar-monolith::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+  transition: background var(--transition-normal);
+}
+
+.pillar-monolith:hover {
+  background: rgba(36, 35, 32, 0.88);
+  border-color: rgba(240, 82, 69, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(240, 82, 69, 0.18);
+}
+
+.pillar-monolith:hover::before {
+  background: linear-gradient(90deg, var(--accent-coral), var(--accent-glow), transparent);
+}
+
+.pillar-diamond-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--accent-coral);
+  margin-bottom: 0.85rem;
+}
+
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.pillar-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   SECTION 04: ARSENAL TYPOGRAPHIC CONSTELLATION / RADAR STAGE
+   ========================================================================== */
+.arsenal-radar-stage {
+  position: relative;
+  padding: 3.5rem 2.5rem;
+  background: rgba(20, 19, 17, 0.65);
+  border: 1px solid var(--border-hairline-bright);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.radar-backdrop-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 760px;
+  height: 760px;
+  pointer-events: none;
+  opacity: 0.28;
+}
+
+.radar-circle {
+  fill: none;
+  stroke: var(--border-subtle);
+  stroke-width: 1;
+}
+
+.radar-circle.radar-outer {
+  stroke-dasharray: 4 10;
+  animation: radarOuterSpin 70s linear infinite;
+  transform-origin: 360px 360px;
+}
+
+.radar-crosshair {
+  stroke: rgba(240, 82, 69, 0.25);
+  stroke-width: 1;
+}
+
+.radar-sweep-beam {
+  fill: url(#radarSweepGrad);
+  transform-origin: 360px 360px;
+  animation: radarSweep 18s linear infinite;
+}
+
+@keyframes radarOuterSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.constellation-node-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-coral);
+  box-shadow: 0 0 8px var(--accent-coral);
+  display: inline-block;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.arsenal-skill-item:hover .constellation-node-dot {
+  transform: scale(1.7);
+  background: var(--accent-glow);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+
+/* ==========================================================================
+   SECTION 06: EXPANDING CORAL AURA & INVITATION CLIMAX
+   ========================================================================== */
+.closing-expanding-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  height: 580px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aura-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(240, 82, 69, 0.25);
+  animation: auraPulse 8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.aura-ring.ring-1 {
+  animation-delay: 0s;
+}
+
+.aura-ring.ring-2 {
+  inset: 60px;
+  border-color: rgba(255, 99, 79, 0.2);
+  animation-delay: 2.5s;
+}
+
+.aura-ring.ring-3 {
+  inset: 120px;
+  border-color: rgba(240, 82, 69, 0.35);
+  background: radial-gradient(circle, rgba(240, 82, 69, 0.12) 0%, transparent 70%);
+  animation-delay: 5s;
+}
+
+@keyframes auraPulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.65;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.15;
+  }
+}
+
+.closing-corner-bracket {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--accent-coral);
+  pointer-events: none;
+  opacity: 0.65;
+}
+.bracket-tl { top: -10px; left: -10px; border-right: none; border-bottom: none; }
+.bracket-br { bottom: -10px; right: -10px; border-left: none; border-top: none; }
+
+/* Responsive Adjustments for Motion Graphics */
+@media (max-width: 992px) {
+  .portrait-orbital-wrap {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .typographic-tri-pillars {
+    grid-template-columns: 1fr;
+  }
+  .arsenal-radar-stage {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* ==========================================================================
    ACCESSIBILITY: PREFERS-REDUCED-MOTION
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
@@ -2039,8 +2709,19 @@ button {
   }
   .cinematic-beam-line,
   .sparkle-icon,
-  .pulse-dot {
+  .pulse-dot,
+  .ambient-trail-path,
+  .sculptural-blob,
+  .portrait-light-sweep,
+  .gyro-ellipse,
+  .orbital-planet,
+  .connector-line::after,
+  .dial-arc-accent,
+  .radar-circle.radar-outer,
+  .radar-sweep-beam,
+  .aura-ring {
     animation: none !important;
+    transform: none !important;
   }
   .hero-editorial-title .title-inner,
   .hero-prominent-name,
@@ -2064,3 +2745,4 @@ button {
     display: none !important;
   }
 }
+
